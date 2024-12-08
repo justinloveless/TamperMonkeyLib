@@ -1,4 +1,5 @@
-import { logStuff } from "./dependency.mjs";
+const { logStuff } = await import ("https://raw.githubusercontent.com/justinloveless/TamperMonkeyLib/main/RemoveDubs/dependency.mjs");
+
 export function toggleDubs() {
     logStuff();
     const checkbox = document.createElement("input");
