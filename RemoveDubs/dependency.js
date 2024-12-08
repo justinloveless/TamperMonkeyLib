@@ -1,3 +1,3 @@
-export function logStuff(){
+function logStuff(){
     console.log("This is a log message");
 }
