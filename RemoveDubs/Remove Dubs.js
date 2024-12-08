@@ -1,6 +1,6 @@
 const { logStuff } = await import ("https://raw.githubusercontent.com/justinloveless/TamperMonkeyLib/main/RemoveDubs/dependency.mjs");
 
-export function toggleDubs() {
+function toggleDubs() {
     logStuff();
     const checkbox = document.createElement("input");
     const textNode = document.createTextNode("Show Dubs");
