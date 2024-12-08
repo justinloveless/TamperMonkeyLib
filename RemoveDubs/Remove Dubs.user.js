@@ -18,5 +18,5 @@
 (function() {
     'use strict';
     console.log('Starting script... Removing Dubs');
-    toggleDubs();
+    logStuff();
 })();
