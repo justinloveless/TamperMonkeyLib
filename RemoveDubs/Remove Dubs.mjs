@@ -1,4 +1,6 @@
-function toggleDubs() {
+import { logStuff } from "./dependency.mjs";
+export function toggleDubs() {
+    logStuff();
     const checkbox = document.createElement("input");
     const textNode = document.createTextNode("Show Dubs");
     checkbox.id = "dubs";
