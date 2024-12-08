@@ -10,6 +10,8 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=crunchyroll.com
 // @grant        GM_getValue
 // @grant        GM_setValue
+// @updateURL    https://raw.githubusercontent.com/justinloveless/TamperMonkeyLib/main/RemoveDubs/Remove%20Dubs.user.js
+// @downloadURL  https://raw.githubusercontent.com/justinloveless/TamperMonkeyLib/main/RemoveDubs/Remove%20Dubs.user.js
 // @require      https://raw.githubusercontent.com/justinloveless/TamperMonkeyLib/main/RemoveDubs/Remove%20Dubs.js
 
 // ==/UserScript==
