@@ -15,8 +15,6 @@
   margin: 0 0 10px;
 }
 
-#add-btn,
-#clear-btn,
 #submit-btn {
   width: 100%;
   padding: 8px;
@@ -29,8 +27,6 @@
   font-size: 14px;
 }
 
-#add-btn:hover,
-#clear-btn:hover,
 #submit-btn:hover {
   background-color: #218838;
 }
