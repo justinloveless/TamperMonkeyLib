@@ -82,4 +82,7 @@ module.exports = {
         headers,
         })],
     mode: 'production', // Use 'development' for easier debugging
+    optimization: {
+        minimize: false, // don't minify the output, so people can see the original code
+    },
 };
