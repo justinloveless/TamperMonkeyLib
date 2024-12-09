@@ -15,18 +15,27 @@
   margin: 0 0 10px;
 }
 
-#submit-btn {
+button {
   width: 100%;
   padding: 8px;
   margin-top: 10px;
   cursor: pointer;
-  background-color: #28a745;
   border: none;
-  color: white;
   border-radius: 5px;
   font-size: 14px;
 }
 
-#submit-btn:hover {
+.submit-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.submit-btn:hover {
   background-color: #218838;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  color: black;
 }

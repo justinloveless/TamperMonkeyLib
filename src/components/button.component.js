@@ -1,5 +1,5 @@
 import { createElement, createComponent } from '../miniFramework';
 
-export const Button = createComponent(({ id, text, onClick }) =>
-  createElement('button', { id, onClick }, text)
+export const Button = createComponent(({ id, className, text, onClick }) =>
+  createElement('button', { id, className, onClick }, text)
 );

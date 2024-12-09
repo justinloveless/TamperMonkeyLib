@@ -1,10 +1,13 @@
 export function createElement(type, props = {}, ...children) {
   const element = document.createElement(type);
+
   Object.entries(props).forEach(([key, value]) => {
     if (key.startsWith('on') && typeof value === 'function') {
       element.addEventListener(key.toLowerCase().substr(2), value);
     } else if (key === 'style' && typeof value === 'object') {
       Object.assign(element.style, value);
+    } else if (key === 'className') {
+      element.setAttribute('class', value);
     } else {
       element[key] = value;
     }
