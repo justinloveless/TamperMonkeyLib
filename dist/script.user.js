@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name My Userscript
 // @description A cool userscript
-// @version 1.0.2
+// @version 1.0.3
 // @author Your Name
 // @match https://example.com/*
 // @grant GM_getValue
@@ -45,8 +45,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#floating-list-container {
   margin: 0 0 10px;
 }
 
-#add-btn,
-#clear-btn,
 #submit-btn {
   width: 100%;
   padding: 8px;
@@ -59,8 +57,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#floating-list-container {
   font-size: 14px;
 }
 
-#add-btn:hover,
-#clear-btn:hover,
 #submit-btn:hover {
   background-color: #218838;
 }
