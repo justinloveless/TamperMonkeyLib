@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name My Userscript
 // @description A cool userscript
-// @version 1.0.0
+// @version 1.0.2
 // @author Your Name
 // @match https://example.com/*
 // @grant GM_getValue

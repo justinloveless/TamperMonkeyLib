@@ -23,3 +23,9 @@ main branch.
 
 To install the TamperMonkey script, simply go to the `dist/script.user.js` file
 in github and click on the "Raw" link to the code.
+
+# Debugging locally
+
+Step 1: run `npm install` to get all the dependencies
+Step 2: run `npx webpack` to compile the script
+Step 3: copy the `dist/script.user.js` file to your TamperMonkey script editor
