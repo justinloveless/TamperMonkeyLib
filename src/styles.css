@@ -1,0 +1,36 @@
+#floating-list-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+#floating-list-container h3 {
+  margin: 0 0 10px;
+}
+
+#add-btn,
+#clear-btn,
+#submit-btn {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#add-btn:hover,
+#clear-btn:hover,
+#submit-btn:hover {
+  background-color: #218838;
+}
