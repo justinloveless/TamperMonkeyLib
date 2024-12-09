@@ -9,7 +9,7 @@
 // @grant        GM_setValue
 // ==/UserScript==
 
-import { logStuff } from './module1.js';
+import { toggleDubs } from './Remove Dubs';
 
 console.log('Tampermonkey Script Started');
-logStuff();
+toggleDubs();
