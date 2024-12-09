@@ -1,6 +1,7 @@
 {
     "name": "My Userscript",
     "description": "A cool userscript",
+    "updateURL": "https://raw.githubusercontent.com/justinloveless/TamperMonkeyTemplate/dist/script.user.js",
     "author": "Your Name",
     "match": [
         "https://example.com/*"
