@@ -29,3 +29,39 @@ in github and click on the "Raw" link to the code.
 Step 1: run `npm install` to get all the dependencies
 Step 2: run `npx webpack` to compile the script
 Step 3: copy the `dist/script.user.js` file to your TamperMonkey script editor
+
+# Sample TM script
+
+### Main App Component:
+
+```javascript
+import { createComponent } from './miniFramework';
+import { Container } from './components/container.component';
+import { Button } from './components/button.component';
+import { Title } from './components/title.component';
+
+export const App = createComponent(() => {
+  return Container({
+    children: [
+      Title({
+        text: 'Sample Title',
+      }),
+      Button({
+        id: 'submit-btn',
+        text: 'Submit',
+        onClick: () => alert('Submit button clicked'),
+      }),
+    ],
+  });
+});
+```
+
+### Other components
+
+```javascript
+import { createElement, createComponent } from '../miniFramework';
+
+export const Button = createComponent(({ id, text, onClick }) =>
+  createElement('button', { id, onClick }, text)
+);
+```
