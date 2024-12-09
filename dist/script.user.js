@@ -8,4 +8,16 @@
 // @grant GM_setValue
 // ==/UserScript==
 
-(()=>{"use strict";console.log("Tampermonkey Script Started (using webpack)"),console.log("This is a demo function from another file.","calling demo function from main.js")})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+
+;// ./src/exampleModule.js
+function demo(message) {
+  console.log("This is a demo function from another file.", message);
+}
+;// ./src/main.js
+
+console.log('Tampermonkey Script Started (using webpack)');
+demo('calling demo function from main.js');
+/******/ })()
+;
