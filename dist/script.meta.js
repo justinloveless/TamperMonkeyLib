@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name Your Script Name
 // @description Your description here
-// @version 1.0.5
+// @version 1.0.6
 // @author Your Name
 // @match https://www.crunchyroll.com/simulcastcalendar*
 // @grant GM_getValue
