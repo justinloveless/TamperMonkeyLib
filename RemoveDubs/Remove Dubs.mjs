@@ -1,4 +1,4 @@
-export function toggleDubs() {
+const toggleDubs = () => {
     const checkbox = document.createElement("input");
     const textNode = document.createTextNode("Show Dubs");
     checkbox.id = "dubs";
@@ -28,3 +28,4 @@ export function toggleDubs() {
         }
     }
 }
+export { toggleDubs };
