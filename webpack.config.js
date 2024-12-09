@@ -1,9 +1,12 @@
 const path = require('path');
 const { UserscriptPlugin } = require('webpack-userscript');
+const Ajv = require('ajv');
+// const headers = require('./userscript-headers.json'); // Load static headers
 const fs = require('fs');
 
 // Define the path to your metadata file where the version is stored
 const versionFilePath = path.resolve(__dirname, 'version.json');
+
 
 // Read and increment the version dynamically
 const getUpdatedVersion = () => {
@@ -30,6 +33,31 @@ const getUpdatedVersion = () => {
 // Get the new version
 const updatedVersion = getUpdatedVersion();
 
+
+
+// Load and validate the headers
+const headersPath = path.resolve(__dirname, 'userscript-headers.json');
+let headers = JSON.parse(fs.readFileSync(headersPath, 'utf-8'));
+
+const ajv = new Ajv();
+const schema = {
+  type: 'object',
+  properties: {
+    name: { type: 'string' },
+    version: {type: 'string' },
+    description: { type: 'string' },
+    author: { type: 'string' },
+    match: { type: 'array', items: { type: 'string' } },
+    grant: { type: 'array', items: { type: 'string' } }
+  },
+  required: ['name', 'version', 'match'],
+};
+headers = {...headers, version: updatedVersion};
+
+if (!ajv.validate(schema, headers)) {
+  throw new Error('Invalid userscript headers: ' + ajv.errorsText());
+}
+
 module.exports = {
     entry: './src/main.js',
     output: {
@@ -51,17 +79,7 @@ module.exports = {
         ],
     },
     plugins: [ new UserscriptPlugin({
-        headers: {
-            name: 'Your Script Name',
-            namespace: 'http://tampermonkey.net/',
-            version: updatedVersion,
-            description: 'Your description here',
-            author: 'Your Name',
-            match: ['https://www.crunchyroll.com/simulcastcalendar*'], // URL patterns to match
-            iconUrl: 'https://www.google.com/s2/favicons?sz=64&domain=crunchyroll.com',
-            grant: ['GM_getValue', 'GM_setValue'], // Required GM APIs},
-            updateURL: 'https://raw.githubusercontent.com/justinloveless/TamperMonkeyLib/main/dist/script.user.js',
-        }
+        headers,
         })],
     mode: 'production', // Use 'development' for easier debugging
 };
