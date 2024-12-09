@@ -12,8 +12,7 @@
 // @grant        GM_setValue
 // @updateURL    https://raw.githubusercontent.com/justinloveless/TamperMonkeyLib/main/RemoveDubs/Remove%20Dubs.user.js
 // @downloadURL  https://raw.githubusercontent.com/justinloveless/TamperMonkeyLib/main/RemoveDubs/Remove%20Dubs.user.js
-// @require      https://raw.githubusercontent.com/justinloveless/TamperMonkeyLib/main/RemoveDubs/dependency.js
-// @require      https://raw.githubusercontent.com/justinloveless/TamperMonkeyLib/main/RemoveDubs/Remove Dubs.js
+// @require      https://raw.githubusercontent.com/justinloveless/TamperMonkeyLib/main/RemoveDubs/dependency2.js
 
 // ==/UserScript==
 (function() {
